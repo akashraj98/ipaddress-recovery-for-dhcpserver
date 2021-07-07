@@ -2,10 +2,12 @@ import re
 import os
 import subprocess
 
-#read dhcp lease file for ips
+
+# stream = os.popen('dhcp-lease-list')
+# fstring = stream.readlines()
+# read dhcp lease file for ips
 with open('/var/lib/dhcp/dhcpd.leases')as fh:
     fstring = fh.readlines()
-
 
 #use regex to exract all the ips that are assigned by dhcp 
 pattern = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
@@ -30,6 +32,11 @@ with open(os.devnull, "wb") as limbo:
                 else:
                         print(ip, "active")
 
-print(noresp_ip)
 
+# print(noresp_ip)
+
+#stop dhcp server
+#chcek the lease lease file and check the entry
+# remove noresp_ip carefully
+#restart dhcp
 

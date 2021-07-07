@@ -3,6 +3,7 @@ import re
 with open('/var/lib/dhcp/dhcpd.leases')as fh:
     fstring = fh.readlines()
 
+print(fstring)
 pattern = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
 leaseip_lst =[]
 for line in fstring:
