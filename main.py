@@ -39,11 +39,15 @@ with open(os.devnull, "wb") as limbo:
 #chcek the lease lease file and check the entry
 # remove noresp_ip carefully
 #restart dhcp
-print(noresp_ip)
+
 for ip,line_no in leaseip_lst:
         if ip in noresp_ip:
-                for j in range(line_no,line_no+10):
+                endlno=line_no
+                while fstring[endlno]!='}\n':
+                        endlno+=1
+                for j in range(line_no,endlno+1):
                         fstring[j] = '\n'
+                
 
 start = time.time()
 
