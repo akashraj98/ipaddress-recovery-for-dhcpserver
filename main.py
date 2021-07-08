@@ -21,6 +21,7 @@ for index in range(len(fstring)):
 # checks if they reply to ping
 # creates list of ips with no ping reply
 noresp_ip=[]
+resp_ip =[]
 with open(os.devnull, "wb") as limbo:
         for ip in leaseip_lst:
                 result=subprocess.Popen(["ping", "-c", "1", "-W", "2", ip],
@@ -30,6 +31,7 @@ with open(os.devnull, "wb") as limbo:
                         noresp_ip.append(ip)
                 else:
                         print(ip, "active")
+                        resp_ip.append(ip)
 
 
 ###RECOVER_IP
@@ -54,3 +56,10 @@ subprocess.call(["Systemctl restart isc-dhcp-server"])
 print("RECOVERING IPs ..................")
 time.sleep(2)
 
+
+#Creating Summary table
+for ip in resp_ip:
+        print(ip,"ASSIGNED")
+
+for ip in noresp_ip:
+        print(ip,"RECOVERED")
