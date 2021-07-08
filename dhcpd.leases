@@ -20,54 +20,6 @@ authoring-byte-order little-endian;
 
 
 
-lease 192.168.1.106 {
-  starts 3 2021/07/07 20:48:38;
-  ends 3 2021/07/07 20:58:38;
-  tstp 3 2021/07/07 20:58:38;
-  cltt 3 2021/07/07 20:48:38;
-  binding state free;
-  hardware ethernet 64:36:3a:34:36:3a;
-}
-lease 192.168.1.107 {
-  starts 3 2021/07/07 20:48:40;
-  ends 3 2021/07/07 20:58:40;
-  tstp 3 2021/07/07 20:58:40;
-  cltt 3 2021/07/07 20:48:40;
-  binding state free;
-  hardware ethernet 63:35:3a:37:33:3a;
-}
-lease 192.168.1.108 {
-  starts 3 2021/07/07 20:48:43;
-  ends 3 2021/07/07 20:58:43;
-  tstp 3 2021/07/07 20:58:43;
-  cltt 3 2021/07/07 20:48:43;
-  binding state free;
-  hardware ethernet 31:31:3a:61:63:3a;
-}
-lease 192.168.1.109 {
-  starts 3 2021/07/07 20:48:45;
-  ends 3 2021/07/07 20:58:45;
-  tstp 3 2021/07/07 20:58:45;
-  cltt 3 2021/07/07 20:48:45;
-  binding state free;
-  hardware ethernet 36:37:3a:36:39:3a;
-}
-lease 192.168.1.110 {
-  starts 3 2021/07/07 20:48:47;
-  ends 3 2021/07/07 20:58:47;
-  tstp 3 2021/07/07 20:58:47;
-  cltt 3 2021/07/07 20:48:47;
-  binding state free;
-  hardware ethernet 38:31:3a:62:64:3a;
-}
-lease 192.168.1.111 {
-  starts 3 2021/07/07 20:48:49;
-  ends 3 2021/07/07 20:58:49;
-  tstp 3 2021/07/07 20:58:49;
-  cltt 3 2021/07/07 20:48:49;
-  binding state free;
-  hardware ethernet 37:33:3a:61:30:3a;
-}
 
 
 
@@ -84,107 +36,85 @@ lease 192.168.1.111 {
 
 
 
-lease 192.168.1.114 {
-  starts 3 2021/07/07 20:48:55;
-  ends 3 2021/07/07 20:58:55;
-  tstp 3 2021/07/07 20:58:55;
-  cltt 3 2021/07/07 20:48:55;
-  binding state free;
-  hardware ethernet 36:39:3a:38:32:3a;
-}
-lease 192.168.1.115 {
-  starts 3 2021/07/07 20:48:57;
-  ends 3 2021/07/07 20:58:57;
-  tstp 3 2021/07/07 20:58:57;
-  cltt 3 2021/07/07 20:48:57;
-  binding state free;
-  hardware ethernet 33:38:3a:39:36:3a;
-}
-lease 192.168.1.116 {
-  starts 3 2021/07/07 20:49:00;
-  ends 3 2021/07/07 20:59:00;
-  tstp 3 2021/07/07 20:59:00;
-  cltt 3 2021/07/07 20:49:00;
-  binding state free;
-  hardware ethernet 65:39:3a:31:36:3a;
-}
-lease 192.168.1.117 {
-  starts 3 2021/07/07 20:49:02;
-  ends 3 2021/07/07 20:59:02;
-  tstp 3 2021/07/07 20:59:02;
-  cltt 3 2021/07/07 20:49:02;
-  binding state free;
-  hardware ethernet 37:32:3a:36:33:3a;
-}
-lease 192.168.1.118 {
-  starts 3 2021/07/07 20:49:04;
-  ends 3 2021/07/07 20:59:04;
-  tstp 3 2021/07/07 20:59:04;
-  cltt 3 2021/07/07 20:49:04;
-  binding state free;
-  hardware ethernet 66:64:3a:65:66:3a;
-}
-lease 192.168.1.119 {
-  starts 3 2021/07/07 20:49:06;
-  ends 3 2021/07/07 20:59:06;
-  tstp 3 2021/07/07 20:59:06;
-  cltt 3 2021/07/07 20:49:06;
-  binding state free;
-  hardware ethernet 61:63:3a:66:65:3a;
-}
-lease 192.168.1.120 {
-  starts 3 2021/07/07 20:49:08;
-  ends 3 2021/07/07 20:59:08;
-  tstp 3 2021/07/07 20:59:08;
-  cltt 3 2021/07/07 20:49:08;
-  binding state free;
-  hardware ethernet 34:32:3a:39:37:3a;
-}
-lease 192.168.1.101 {
-  starts 3 2021/07/07 20:54:21;
-  ends 3 2021/07/07 21:04:21;
-  tstp 3 2021/07/07 21:04:21;
-  cltt 3 2021/07/07 20:54:21;
-  binding state free;
-  hardware ethernet 9c:28:f7:c4:1c:04;
-  uid "\001\234(\367\304\034\004";
-  set vendor-class-identifier = "android-dhcp-11";
-}
-lease 192.168.1.100 {
-  starts 3 2021/07/07 20:56:00;
-  ends 3 2021/07/07 21:06:00;
-  tstp 3 2021/07/07 21:06:00;
-  cltt 3 2021/07/07 20:56:00;
-  binding state free;
-  hardware ethernet 38:31:3a:32:63:3a;
-}
-lease 192.168.1.102 {
-  starts 4 2021/07/08 05:55:35;
-  ends 4 2021/07/08 05:57:35;
-  cltt 4 2021/07/08 05:55:35;
-  binding state free;
-  hardware ethernet 24:ee:9a:e8:73:c1;
-  client-hostname "master-14IWL-Touch";
-}
-lease 192.168.1.103 {
-  starts 4 2021/07/08 05:56:32;
-  ends 4 2021/07/08 06:06:32;
-  cltt 4 2021/07/08 05:56:32;
+
+
+
+
+
+
+
+
+lease 192.168.1.104 {
+  starts 4 2021/07/08 18:38:07;
+  ends 4 2021/07/08 18:48:07;
+  tstp 4 2021/07/08 18:48:07;
+  cltt 4 2021/07/08 18:38:07;
   binding state active;
   next binding state free;
   rewind binding state free;
-  hardware ethernet 1a:49:ce:bb:4c:d0;
-  uid "\001\032I\316\273L\320";
-  set vendor-class-identifier = "android-dhcp-11";
-  client-hostname "SM-T510";
+  hardware ethernet 64:39:3a:65:38:3a;
 }
-lease 192.168.1.103 {
-  starts 4 2021/07/08 05:56:32;
-  ends 4 2021/07/08 06:06:32;
-  tstp 4 2021/07/08 06:06:32;
-  cltt 4 2021/07/08 05:58:07;
-  binding state free;
-  hardware ethernet 1a:49:ce:bb:4c:d0;
-  uid "\001\032I\316\273L\320";
-  set vendor-class-identifier = "android-dhcp-11";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+server-duid "\000\001\000\001(z\002g$\356\232\350s\301";
+
+lease 192.168.1.110 {
+  starts 4 2021/07/08 18:41:59;
+  ends 4 2021/07/08 18:51:59;
+  cltt 4 2021/07/08 18:41:59;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet ac:fd:ce:5a:e9:d4;
+  uid "\001\254\375\316Z\351\324";
+  set vendor-class-identifier = "MSFT 5.0";
+  client-hostname "raj";
 }

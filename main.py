@@ -24,14 +24,14 @@ noresp_ip=[]
 resp_ip =[]
 with open(os.devnull, "wb") as limbo:
         for ip in leaseip_lst:
-                result=subprocess.Popen(["ping", "-c", "1", "-W", "2", ip],
+                result=subprocess.Popen(["ping", "-c", "1", "-W", "2", ip[0]],
                         stdout=limbo, stderr=limbo).wait()
                 if result:
-                        print(ip, "Legitimate")
-                        noresp_ip.append(ip)
+                        print(ip[0], "Malicious")
+                        noresp_ip.append(ip[0])
                 else:
-                        print(ip, "Malicious")
-                        resp_ip.append(ip)
+                        print(ip[0], "Legitimate")
+                        resp_ip.append(ip[0])
 
 
 ###RECOVER_IP
@@ -39,21 +39,21 @@ with open(os.devnull, "wb") as limbo:
 #chcek the lease lease file and check the entry
 # remove noresp_ip carefully
 #restart dhcp
-
+print(noresp_ip)
 for ip,line_no in leaseip_lst:
         if ip in noresp_ip:
-                for j in range(line_no,line_no+8):
+                for j in range(line_no,line_no+10):
                         fstring[j] = '\n'
 
 start = time.time()
 
-subprocess.call(["Systemctl stop isc-dhcp-server"])
-subprocess.call(["mv",LEASE_PATH,LEASE_PATH+".bak"])
-with open(LEASE_PATH, 'w') as f:
+subprocess.run(["systemctl", "stop", "isc-dhcp-server"])
+subprocess.run(["mv",LEASE_PATH,LEASE_PATH+".bak"])
+with open(LEASE_PATH, 'w+') as f:
     for line in fstring:
         f.write(line)
 
-subprocess.call(["Systemctl restart isc-dhcp-server"])
+subprocess.run(["systemctl", "restart", "isc-dhcp-server"])
 end = time.time()
 print("\nRECOVERING IPs ..................\n")
 time.sleep(1)
