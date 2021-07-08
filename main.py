@@ -27,10 +27,10 @@ with open(os.devnull, "wb") as limbo:
                 result=subprocess.Popen(["ping", "-c", "1", "-W", "2", ip],
                         stdout=limbo, stderr=limbo).wait()
                 if result:
-                        print(ip, "inactive")
+                        print(ip, "Legitimate")
                         noresp_ip.append(ip)
                 else:
-                        print(ip, "active")
+                        print(ip, "Malicious")
                         resp_ip.append(ip)
 
 
@@ -45,6 +45,8 @@ for ip,line_no in leaseip_lst:
                 for j in range(line_no,line_no+8):
                         fstring[j] = '\n'
 
+start = time.time()
+
 subprocess.call(["Systemctl stop isc-dhcp-server"])
 subprocess.call(["mv",LEASE_PATH,LEASE_PATH+".bak"])
 with open(LEASE_PATH, 'w') as f:
@@ -52,12 +54,14 @@ with open(LEASE_PATH, 'w') as f:
         f.write(line)
 
 subprocess.call(["Systemctl restart isc-dhcp-server"])
-
-print("RECOVERING IPs ..................")
-time.sleep(2)
-
-
+end = time.time()
+print("\nRECOVERING IPs ..................\n")
+time.sleep(1)
+for ip in noresp_ip:
+        print(ip,end-start)
+        
 #Creating Summary table
+print("\n__________IP Address Status_________\n")
 for ip in resp_ip:
         print(ip,"ASSIGNED")
 
